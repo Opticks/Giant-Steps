@@ -13,7 +13,7 @@
 	<meta name="description" content="<?php bloginfo('description')?>" />
 	
 	<title><?php if (function_exists('is_tag') && is_tag()) { echo 'Posts tagged &quot;'.$tag.'&quot; - '; } elseif (is_archive()) { wp_title(''); echo ' Archive - '; } elseif (is_search()) { echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; } elseif (!(is_404()) && (is_single()) || (is_page())) { wp_title(''); echo ' - '; } elseif (is_404()) { echo 'Not Found - '; } bloginfo('name'); ?></title>
-	<link rel="shortcut icon" href="http://colt-rane.com/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="<?php bloginfo('url')?>/favicon.ico" type="image/x-icon" />
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 
   <!--[if lt IE 9]>
@@ -27,13 +27,6 @@
 </head>
 <body>
 	<div id="header">
-		<h1 id="logo"><a href="<?php echo get_settings('home'); ?>/">Colt + Rane</a></h1>
-		<ul id="utility" class="right">
-			<li><a title="Submit to COLT + RANE" class="tip" href="mailto:info@colt-rane.com" target="_self"><img src="<?php bloginfo('template_directory'); ?>/images/submit.gif" alt="submit" /></a></li>
-			<li><a title="RSS" class="tip" href="http://feeds.feedburner.com/colt-rane" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/rss.gif" alt="rss" /></a></li>
-			<li id="list-link"><a title="Feed" class="tip" href="<?php echo get_settings('home'); ?>/" target="_self"><img src="<?php bloginfo('template_directory'); ?>/images/list.gif" alt="single" /></a></li>
-			<li id="grid-link"><a title="Archive" class="tip" href="/archive/" target="_self"><img src="<?php bloginfo('template_directory'); ?>/images/grid.gif" alt="multi" /></a></li>
-			<li id="grid-link"><a title="Twitter" class="tip" href="http://twitter.com/colt_rane" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-2.gif" alt="twitter" /></a></li>
-			<li id="grid-link"><a title="Tumblr" class="tip" href="http://colt-rane.tumblr.com/" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/tumblr.gif" alt="tumblr" /></a></li>
-		</ul><!--UTILITY-->
+		<h1 id="logo"><a href="<?php echo get_settings('home'); ?>/"><?php bloginfo('name')?></a></h1>
+	  <?php wp_list_bookmarks( $args ); ?> 
 	</div><!--HEADER-->
