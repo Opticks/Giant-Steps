@@ -1,0 +1,57 @@
+/*
+	Theme Name: Giant Steps
+	Theme URI: http://itsallopticks.com/giant-steps/
+	Description: Running feed theme for Colt + Rane (www.colt-rane.com).
+	Version: 1.0
+	Author: Opticks, Inc.
+	Author URI: http://itsallopticks.com
+*/
+
+* { margin:0; padding:0; }
+body { color:#121212; font-size:62.5%; font-family:arial, helvetica, sans-serif; text-align:center; }
+h1 { font-size:32px; }
+h2 { font-size:22px; }
+h3 { font-size:18px; }
+h4 { font-size:14px; }
+p { line-height:18px; }
+a { color:#121212; text-decoration:none; }
+a:hover { color:#333; }
+
+#header { padding:42px 30px 30px 30px; }
+	h1#logo a { display:block; text-indent:-9999px; width:233px; height:44px; background:url('images/colt-rane-header.jpg') no-repeat top left; }
+	#utility { padding:20px 0 20px 20px; list-style:none; position:fixed; background:#fff; top:50px; right:30px; opacity:0.8; cursor:pointer; }
+		#utility li { display:block; margin-left:10px; float:left; }
+		#utility img { border:none; }
+#body { padding:50px 30px; }
+	.post { text-align:left; margin-bottom:100px; }
+	.post-archive { width:230px; height:180px; display:block; float:left; margin:0 20px 30px 0; }
+		.post h2 { font-weight:normal; margin-bottom:20px; }
+		.post img { margin:0 20px 20px 0; }
+			.post a img { border:none; }
+		.post .meta { font-family:georgia, serif; color:#7b7b7b; font-size:11px; text-transform:lowercase; }
+			.post .meta a { background:#fffc9f; color:#7b7b7b; }
+		.post-archive .crop { width:230px; height:140px; overflow:hidden; margin-bottom:8px; background:url('images/placeholder.gif') no-repeat center center; }
+		.post-archive a { font-family:georgia, serif; color:#7b7b7b; text-transform:lowercase; }
+			.post-archive a:hover { background:#fffc9f; }
+	#pager { list-style:none; }
+		#pager li { display:inline-block }
+		#pager li a { display:block; padding:8px 12px; background:#eee; text-transform:lowercase; font-size:12px; font-family:georgia, serif; }
+		#pager li a:hover { background:#ddd; }
+	#comments { text-align:left; margin-left:15px; }
+	#comments * { font-size:12px; line-height:20px; }
+		#comments h3 { font-size:18px; text-transform:lowercase; font-family:georgia, serif; color:#9b9b9b; font-weight:normal; }
+		.commentlist { list-style:none; }
+			.commentlist li { padding:15px 20px; border-top:1px dotted #e5e5e5; border-bottom:1px dotted #e5e5e5; margin:15px 0; }
+		#respond .contain { margin-bottom:10px; }
+#footer { text-align:left; padding:30px; font-size:10px; color:#9b9b9b; font-style:italic; }
+
+
+/* GLOBAL */
+.right { float:right; }
+.left { float:left; }
+.clear { clear:both; }
+
+/* Tooltip */
+.qtip { opacity:0.9; filter:alpha(opacity=90); }
+.qtip-content h5 { color:#fff; font-size:11px; margin-bottom:5px; }
+.qtip-content p { color:#ccc; font-size:11px; line-height:14px; }
