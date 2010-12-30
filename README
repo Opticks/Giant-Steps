@@ -1,0 +1,2 @@
+1. To install the theme, upload to wordpress wp-content/themes folder.
+2. To make the archive page work, in each post add a custom field called 'secondary_image' and in the value put an image URL.
