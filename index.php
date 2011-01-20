@@ -5,10 +5,12 @@
  */
 get_header();
 ?>
-	<div id="body">
+	<section>
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" class="post">
-			<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title() ?></a></h2>
+		<article id="post-<?php the_ID(); ?>" class="post">
+		  <header>	
+        <h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title() ?></a></h2>
+      </header>
 			<div class="entry">
 				<?php the_content('Read the rest of this entry &raquo;'); ?>
 				<p class="meta">
@@ -17,7 +19,7 @@ get_header();
 					and filed in categorie(s) <span class="categories"><?php the_category( '/'); ?> </span>.
 				</p>
 			</div>
-		</div>
+		</article>
 		<?php endwhile; ?>
 		<?php else : ?>
 		<div class="post">
@@ -26,9 +28,9 @@ get_header();
 			</div>
 		</div>
 		<?php endif; ?>
-		<ul id="pager">
-			<li id="prev-link"><?php previous_posts_link('Previous') ?></li>
-			<li id="next-link"><?php next_posts_link('Next') ?></li>
-		</ul>
-	</div><!--BODY-->
+		<nav>
+			<?php previous_posts_link('Previous') ?>
+			<?php next_posts_link('Next') ?>
+		</nav>
+	</section>
 <?php get_footer(); ?>

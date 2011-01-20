@@ -35,7 +35,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	<div id="header">
+	<header>
 		<h1 id="logo"><a href="<?php echo get_settings('home'); ?>/"><?php bloginfo('name')?></a></h1>
 	  <?php wp_list_bookmarks( $args ); ?> 
-	</div><!--HEADER-->
+	</header>
