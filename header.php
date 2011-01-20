@@ -16,12 +16,14 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url')?>/images/favicon.ico" type="image/x-icon" />
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 
-  <!--[if lt IE 9]>
-      <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-  <![endif]--> 
-	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/tipTip.css" type="text/css" media="screen" />
+
+  <!--[if lt IE 9]>
+      <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]--> 
+	
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 </head>
